@@ -1,0 +1,85 @@
+@charset "UTF-8";
+/* CSS Document */
+
+  .content-splash {
+	  background-color: #000000;
+	  background-image: url(images/ny.jpg);
+	  background-repeat: no-repeat;
+      -webkit-filter: grayscale(90%);
+      filter: grayscale(90%); /* make all photos black and white */ 
+      width: 100%; /* Set width to 100% */
+	  background-size: 100%;
+      margin: auto;
+	  border: solid; /* fixes issue with border */
+  }
+ 
+  .carousel-inner img {
+      -webkit-filter: grayscale(90%);
+      filter: grayscale(90%); /* make all photos black and white */ 
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+  }
+  
+  .header-text {
+	  position: absolute;
+	  top: 24%;
+	  left: 1.8%;
+	  right: auto;
+	  width: 96.66%;
+	  color: #fff;
+  }
+  
+  .header-text p {
+      color: #fff !important;
+	  font-size: 1.5em;
+	  margin-bottom: 4em;
+  }
+  .header-text h2 {
+	  font-size: 5em;
+  }
+	  
+  /* Hide the carousel text when the screen is less than 600 pixels wide */  
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; 
+    }
+  }
+  
+  
+  /* Text 'slide-in' animation */
+  .slideanim {
+	  visibility:hidden;
+  }
+  
+  .slide {
+	  /* The name of the animation */
+	  animation-name: slide;
+	  -webkit-animation-name: slide; 
+	  /* The duration of the animation */
+	  animation-duration: 1s; 
+	  -webkit-animation-duration: 1s;
+	  /* Make the element visible */
+	  visibility: visible; 
+  }
+  
+  /* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+  @keyframes slide {
+	  0% {
+		  opacity: 0;
+		  transform: translateY(70%);
+	  } 
+	  100% {
+		  opacity: 1;
+		  transform: translateY(0%);
+	  } 
+  }
+  @-webkit-keyframes slide {
+	  0% {
+		  opacity: 0;
+		  -webkit-transform: translateY(70%);
+	  } 
+	  100% {
+		  opacity: 1;
+		  -webkit-transform: translateY(0%);
+	  }
+  }
