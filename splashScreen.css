@@ -30,12 +30,14 @@
   }
   
   .header-text p {
-      color: #fff !important;
+      color: #d59563 !important;
 	  font-size: 1.5em;
 	  margin-bottom: 4em;
   }
+  
   .header-text h2 {
-	  font-size: 5em;
+	  font-family: 'Damion', cursive;
+	  font-size: 6em;
   }
 	  
   /* Hide the carousel text when the screen is less than 600 pixels wide */  

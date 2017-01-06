@@ -10,76 +10,60 @@
 <!-- Bootstrap -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <!-- External Fonts -->
-<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Damion" rel="stylesheet">
 <!-- Navbar -->
 <link rel="stylesheet" type="text/css" href="navbar.css">
 <!-- Home Splash Screen -->
 <link rel="stylesheet" type="text/css" href="splashScreen.css">
+<!-- Skill Set  -->
+<link rel="stylesheet" type="text/css" href="skillSet.css">
+
+<!-- JavaScript -->
+<script src="mapStyle.js" type="text/javascript"></script>
+
+<!-- Google Map API -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7JB_vS-cSkYuBvIbtwcFbz1wOQrwBCCU&callback=initMap"
+async defer></script>
 
 <style>
-
-  body {
-      font: 400 15px/1.8 Lato, sans-serif;
-      color: #777;
-  }
-
-  .container {
-      padding: 80px 120px;
+mapStyle
+  html, body {
+	max-width: 100%;
+    overflow-x: hidden;  
+	font: 400 15px/1.8 Lato, sans-serif;
+	color: #777;
   }
   
-  .content-skill-set  {
-	  width: 100%;
-	  padding: 100px 0px 100px 0px;
+  strong {
+	  color: #d59563;
   }
   
-  .content-skill-set  h3 {
-	  font-size: 3em;
+  .lblBtn {
+	background-color: #2f3948;
+	color: #d59563; 
   }
   
-  .content-skill-set  ul {
-	  padding: 0px;
-  }
-  
-  .content-skill-set  li {
-	  list-style-type: none;
-	  text-align: center;
+  .lblBtn:hover, .lblBtn:focus {
+	border: 1px solid #333;
+	background-color: #fff;
+	color: #d59563;
   }
 
-  /* Read More */
-  .read-more-state {
-	display: none;
+  #map {
+    width: 100%;
+    height: 400px;
   }
   
-  .read-more-target {
-	opacity: 0;
-	max-height: 0;
-	font-size: 0;
-	transition: .25s ease;
+  #wrapper { 
+	position: relative; 
   }
   
-  .read-more-state:checked ~ .read-more-wrap .read-more-target {
-	opacity: 1;
-	font-size: inherit;
-	max-height: 999em;
-  }
-  
-  .read-more-state ~ .read-more-trigger:before {
-	content: 'Show more';
-  }
-  
-  .read-more-state:checked ~ .read-more-trigger:before {
-	content: 'Show less';
-  }
-  
-  .read-more-trigger {
-	cursor: pointer;
-	display: inline-block;
-	padding: 0 .5em;
-	color: #666;
-	font-size: .9em;
-	line-height: 2;
-	border: 1px solid #ddd;
-	border-radius: .25em;
+  #over_map { 
+	position: absolute; 
+	top: 10px; 
+	left: 10px; 
+	z-index: 99; 
   }
   
 </style>
@@ -99,7 +83,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#home">Malcolm Malloy</a>
+      <a class="navbar-brand" href="#home">M.M</a>
     </div>
 
     <div class="collapse navbar-collapse" id="myNavbar">
@@ -144,7 +128,8 @@
   <br>
 
   <div class="row">
-
+	
+    <!-- Web-Based Languages -->
     <div class="col-sm-4">
       <p class="text-center"><strong>Web-Based Languages</strong></p><br>
       
@@ -156,15 +141,17 @@
           <li>CSS</li>
           <li class="read-more-target">MySQLi</li>
           <li class="read-more-target">JavaScript</li>
+          <li class="read-more-target">jQuery</li>
           <li class="read-more-target">Bootstrap</li>
           <li class="read-more-target">AngularJS</li>
           <li class="read-more-target">XHTML</li>
         </ul>
         
-        <label for="post-1" class="read-more-trigger"></label>
+        <label for="post-1" class="read-more-trigger lblBtn"></label>
         
     </div>
 
+	<!-- Programming Languages -->
     <div class="col-sm-4">
       <p class="text-center"><strong>Programming Languages</strong></p><br>
 
@@ -177,10 +164,11 @@
           <li class="read-more-target">ActionScript 3.0</li>
         </ul>
         
-        <label for="post-2" class="read-more-trigger"></label>
+        <label for="post-2" class="read-more-trigger lblBtn"></label>
 
     </div>
 
+    <!-- Software Proficiencies -->
     <div class="col-sm-4">
       <p class="text-center"><strong>Software Proficiencies</strong></p><br>
       
@@ -197,12 +185,35 @@
           <li class="read-more-target">Microsoft Powerpoint</li>
         </ul>
         
-        <label for="post-3" class="read-more-trigger"></label>
+        <label for="post-3" class="read-more-trigger lblBtn"></label>
         
     </div>
 
   </div>
 </section>
+
+<!-- Google Maps -->
+<section id="contact">
+
+  <div id="wrapper">
+  
+    <div id="map">
+    </div>
+    
+    <div id="over_map" class="col-md-12 text-center">
+    	<p>Contact Me</p>
+        <form>
+            <label for="name:"><input id="name" type="text" name="name" placeholder="Name"></label>
+            <label for="email:"><input id="email" type="text" name="email" placeholder="Email"></label>
+            <label for="Message:"><textarea id="message" type="text" name="message" placeholder="Message:"></textarea></label>
+        </form>
+    </div>
+    
+  </div>
+  
+</section>
+
+
 
 </body>
 </html>
