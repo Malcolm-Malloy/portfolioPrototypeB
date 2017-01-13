@@ -7,7 +7,7 @@
 <!-- CSS -->
 <!-- Reset Stylesheet - (This stylesheet is used to reset the default CSS settings set by browsers) -->
 <link rel="stylesheet" type="text/css" media="screen" href="reset.css">
-<!-- Bootstrap -->
+<!-- External Bootstrap -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <!-- External Fonts -->
 <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
@@ -19,9 +19,13 @@
 <!-- Skill Set  -->
 <link rel="stylesheet" type="text/css" href="skillSet.css">
 
-<!-- JavaScript -->
+<!-- JAVASCRIPT -->
+<!-- Custom Map Styles -->
 <script src="mapStyle.js" type="text/javascript"></script>
-
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <!-- Google Map API -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7JB_vS-cSkYuBvIbtwcFbz1wOQrwBCCU&callback=initMap"
 async defer></script>
@@ -36,9 +40,9 @@ mapStyle
   }
   
   strong {
-	  color: #d59563;
+	color: #d59563;
   }
-  
+
   .lblBtn {
 	background-color: #2f3948;
 	color: #d59563; 
@@ -50,6 +54,7 @@ mapStyle
 	color: #d59563;
   }
 
+  /* Google Map */
   #map {
     width: 100%;
     height: 400px;
@@ -64,34 +69,90 @@ mapStyle
 	top: 10px; 
 	left: 10px; 
 	z-index: 99; 
+	margin-left:auto;
+    margin-right:auto;
   }
+  
+  /* Form styles (On top of Google Map) */
+  textarea {
+	height: 200px;
+  }
+  
+  .inputStyle {
+	background-color: rgba(0,0,0,0.75);
+	border-style: solid;
+	border-color: #000;
+	color: #d59563; 
+	font-weight: normal;
+	width: 450px; 
+	padding: 3px 10px 3px 10px;
+  }
+  
+  ::-webkit-input-placeholder {
+	color: #d59563;
+	font-weight: normal;
+  }
+  
+  :-moz-placeholder { /* Firefox 18- */
+	color: #d59563; 
+	font-weight: normal; 
+  }
+  
+  ::-moz-placeholder {  /* Firefox 19+ */
+	color: #d59563; 
+	font-weight: normal; 
+  }
+  
+  :-ms-input-placeholder {  
+	color: #d59563;  
+	font-weight: normal;
+  }
+  
+  
+  /* Education */
+  .content-education  {
+	padding: 80px 0px 80px 0px;
+	margin-left:auto;
+    margin-right:auto;
+  }
+
+  /* Hide the University Logo when the screen is less than 600 pixels wide */  
+  @media (max-width: 600px) {
+    .content-education img {
+      display: none; 
+    }
+  }
+  
+  .content-education  h3 {
+	font-size: 3em;
+  }
+
   
 </style>
 
 </head>
 
-<body id="home" data-spy="scroll" data-target=".navbar" data-offset="50">
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
 <!-- Navbar -->
 <nav class="navbar navbar-default navbar-fixed-top">
-
   <div class="container-fluid">
-  
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
+        <span class="icon-bar"></span> 
       </button>
-      <a class="navbar-brand" href="#home">M.M</a>
+      <a class="navbar-brand" href="#myPage">M.M</a>
     </div>
 
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#home">HOME</a></li>
+        <li><a href="#myPage">HOME</a></li>
+        <li><a href="#aboutMe">ABOUT ME</a></li>
+        <li><a href="#education">EDUCATION</a></li>
+        <!-- <li><a href="#employment">EMPLOYMENT</a></li> -->
         <li><a href="#skill-set">SKILL SET</a></li>
-        <li><a href="#employment">EMPLOYMENT</a></li>
-        <li><a href="#myServices">MY SERVICES</a></li>
         <li><a href="#contact">CONTACT</a></li>
       </ul>
     </div>
@@ -100,7 +161,7 @@ mapStyle
 </nav>
 
 <!-- Home Splash Screen -->
-<div id="splash" class="carousel" data-ride="carousel">
+<section id="splash" class="carousel" data-ride="carousel">
 
     <div class="carousel-inner" role="listbox">
     
@@ -118,14 +179,82 @@ mapStyle
 
     </div>
 
-</div>
+</section>
+
+<!-- About Me --> 
+<section id="aboutMe" class="container">
+  <h3 class="text-center">ABOUT ME</h3>
+  <hr>
+</section>
+
+<!-- Education -->
+<section id="education" class="content-education container">
+
+  <h3 class="text-center">EDUCATION</h3>
+  <hr>
+  
+  <!-- Masters Degree -->
+  <div class="row">
+      <div class="col-xs-6">
+      	<img src="images/monash-logo-transparent.png" alt="Monash University Logo" width="355" height="40">
+        <h4><strong>Masters of Business Information Systems</strong></h4>
+      </div>
+      <div class="col-xs-6">
+        <h4 class="text-right"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> July 2016 - Present</h4>
+      </div>
+  </div>
+  <p><b>Highlights</b></p>
+  <ul>
+    <li>Learning business process modelling, design and simulation</li>
+    <li>Learning programming and design principles for small screen devices</li>
+    <li>Researching and constructing a minor thesis</li>
+  </ul>
+  <hr>
+  
+  <!-- Bachelor Degree -->
+  <div class="row">
+    <div class="col-xs-6">
+      <img src="images/monash-logo-transparent.png" alt="Monash University Logo" width="355" height="40">
+      <h4><strong>Bachelor of Information Technology Systems</strong></h4>
+    </div>
+    <div class="col-xs-6">
+      <h4 class="text-right"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Mar 2009 - Nov 2011</h4>
+    </div>
+  </div>
+  <p><b>Highlights</b></p>
+  <ul>
+    <li>Winning the award for best Studio Project</li>
+    <li>Learning how to create fully functional PHP websites with custom CMS's</li>
+    <li>Learning 3D Animation using Maya and 3DS Max</li>
+    <li>Studying my final semester abroad at Monash Sunway Campus in Malaysia</li>
+  </ul>
+  <hr>
+  
+  <!-- Double Diploma -->
+  <div class="row">
+    <div class="col-xs-6">
+      <img src="images/chisholm-institute-transparent.png" alt="Chisholm Institute of TAFE Logo" width="275" height="40">
+      <h4><strong>Double Diploma of IT Multimedia and Web Design</strong></h4>
+    </div>
+    <div class="col-xs-6">
+      <h4 class="text-right"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Mar 2007 - Nov 2008</h4>
+    </div>
+  </div>
+  <p><b>Highlights</b></p>
+  <ul>
+    <li>Learning how to use Adobe Creative Suite (Photoshop, Dreamweaver, Flash etc...)</li>
+    <li>Learning how to use HTML, MySQL, JavaScript and CSS to create fully functional websites</li>
+    <li>Creating Windows applications using Visual Basic</li>
+  </ul>
+        
+</section>
 
 <!-- Skill Set -->
 <section id="skill-set"  class="content-skill-set container text-center">
 	
   <h3>SKILL SET</h3>
   <p>Throughout my formal education and self study I have gained an extensive knowledge of many IT programs, languages and toolkits</p>
-  <br>
+  <hr>
 
   <div class="row">
 	
@@ -183,6 +312,8 @@ mapStyle
           <li class="read-more-target">Microsoft Word</li>
           <li class="read-more-target">Microsoft Excel</li>
           <li class="read-more-target">Microsoft Powerpoint</li>
+          <li class="read-more-target">Maya</li>
+          <li class="read-more-target">3DS Max</li>
         </ul>
         
         <label for="post-3" class="read-more-trigger lblBtn"></label>
@@ -192,7 +323,7 @@ mapStyle
   </div>
 </section>
 
-<!-- Google Maps -->
+<!-- Contact Me -->
 <section id="contact">
 
   <div id="wrapper">
@@ -200,20 +331,26 @@ mapStyle
     <div id="map">
     </div>
     
+    <!-- Remake using PHP once core elements are done -->
+    <!--
     <div id="over_map" class="col-md-12 text-center">
     	<p>Contact Me</p>
-        <form>
-            <label for="name:"><input id="name" type="text" name="name" placeholder="Name"></label>
-            <label for="email:"><input id="email" type="text" name="email" placeholder="Email"></label>
-            <label for="Message:"><textarea id="message" type="text" name="message" placeholder="Message:"></textarea></label>
+        <form id="contactForm" action="mailto:malcolm.malloy@gmail.com?subject=cxkbvaksjdv" method="post" enctype="text/plain">
+            <label for="name"><input id="name" type="text" name="name" class="inputStyle" placeholder="Name:"></label><br>
+            <label for="email"><input id="email" type="text" name="email" class="inputStyle" placeholder="Email:"></label><br>
+            <label for="Message"><textarea id="message" type="text" name="message" class="inputStyle" placeholder="Message:"></textarea></label><br>
+            <input type="submit" value="Send">
+			<input type="reset" value="Reset">
         </form>
     </div>
+    -->
     
   </div>
   
 </section>
 
-
+<!-- Scroll Effect -->
+<script src="scrollEffect.js" type="text/javascript"></script>
 
 </body>
 </html>

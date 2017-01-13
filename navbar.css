@@ -2,6 +2,7 @@
 /* CSS Document */
 
 .navbar {
+	font-family: Montserrat, sans-serif;
 	margin-bottom: 0;
 	background-color: #2d2d30;
 	border: 0;
@@ -15,19 +16,20 @@
 	font-family: 'Damion', cursive;
 }
 
-.navbar li a, .navbar { 
-	color: #d5d5d5 !important;
+.navbar-header a:hover { 
+	color: #f4511e !important;
 }
 
-.navbar-nav li a:hover {
-	color: #d59563 !important;
-}
-
-.navbar-nav li.active a {
+.navbar li a, .navbar .navbar-brand {
 	color: #fff !important;
-	background-color: #29292c !important;
+}
+
+.navbar-nav li a:hover, .navbar-nav li.active a {
+	color: #f4511e !important;
+	background-color: #222 !important;
 }
 
 .navbar-default .navbar-toggle {
 	border-color: transparent;
+	color: #fff !important;
 }

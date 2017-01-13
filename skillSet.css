@@ -1,13 +1,9 @@
 @charset "UTF-8";
 /* CSS Document */
-
-  .container {
-      padding: 80px 120px;
-  }
-  
+ 
   .content-skill-set  {
 	  width: 100%;
-	  padding: 100px 0px 100px 0px;
+	  padding: 80px 0px 80px 0px;
   }
   
   .content-skill-set  h3 {
