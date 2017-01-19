@@ -1,0 +1,9 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* Hide the University Logo when the screen is less than 600 pixels wide */  
+@media (max-width: 600px) {
+  .content-education img {
+	display: none; 
+  }
+}

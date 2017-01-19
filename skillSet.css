@@ -1,61 +1,68 @@
 @charset "UTF-8";
 /* CSS Document */
  
-  .content-skill-set  {
-	  width: 100%;
-	  padding: 80px 0px 80px 0px;
-  }
+.content-skill-set  {
+  color: #FFF;
+  background-color: #666;
+}
+
+.content-skill-set  ul {
+  padding: 0px;
+}
+
+.content-skill-set  li {
+  list-style-type: none;
+  text-align: center;
+}
+
+.content-skill-set label {
+  margin-bottom: 40px;  
+}
   
-  .content-skill-set  h3 {
-	  font-size: 3em;
-  }
-  
-  .content-skill-set  ul {
-	  padding: 0px;
-  }
-  
-  .content-skill-set  li {
-	  list-style-type: none;
-	  text-align: center;
-  }
-  
-  .content-skill-set label {
-	margin-bottom: 40px;  
-  }
-  
-  /* Read More Function */
-  .read-more-state {
-	display: none;
-  }
-  
-  .read-more-target {
-	opacity: 0;
-	max-height: 0;
-	font-size: 0;
-	transition: .25s ease;
-  }
-  
-  .read-more-state:checked ~ .read-more-wrap .read-more-target {
-	opacity: 1;
-	font-size: inherit;
-	max-height: 999em;
-  }
-  
-  .read-more-state ~ .read-more-trigger:before {
-	content: 'Show more';
-  }
-  
-  .read-more-state:checked ~ .read-more-trigger:before {
-	content: 'Show less';
-  }
-  
-  .read-more-trigger {
-	cursor: pointer;
-	display: inline-block;
-	padding: 0 .5em;
-	color: #666;
-	font-size: .9em;
-	line-height: 2;
-	border: 1px solid #ddd;
-	border-radius: .25em;
-  }
+.lblBtn {
+  background-color: #2f3948;
+  color: #d59563; 
+}
+
+.lblBtn:hover, .lblBtn:focus {
+  border: 1px solid #333;
+  background-color: #fff;
+  color: #d59563;
+}
+
+/* Read More Function */
+.read-more-state {
+  display: none;
+}
+
+.read-more-target {
+  opacity: 0;
+  max-height: 0;
+  font-size: 0;
+  transition: .25s ease;
+}
+
+.read-more-state:checked ~ .read-more-wrap .read-more-target {
+  opacity: 1;
+  font-size: inherit;
+  max-height: 999em;
+}
+
+.read-more-state ~ .read-more-trigger:before {
+  content: 'Show more';
+}
+
+.read-more-state:checked ~ .read-more-trigger:before {
+  content: 'Show less';
+}
+
+.read-more-trigger {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 .5em;
+  color: #FFF;
+  font-size: .9em;
+  line-height: 2;
+  border: 1px solid #ddd;
+  border-radius: .25em;
+}

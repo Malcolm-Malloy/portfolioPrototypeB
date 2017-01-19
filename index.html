@@ -12,12 +12,18 @@
 <!-- External Fonts -->
 <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Damion" rel="stylesheet">
+<!-- General Stylesheet -->
+<link rel="stylesheet" type="text/css" href="style.css">
 <!-- Navbar -->
 <link rel="stylesheet" type="text/css" href="navbar.css">
 <!-- Home Splash Screen -->
 <link rel="stylesheet" type="text/css" href="splashScreen.css">
 <!-- Skill Set  -->
 <link rel="stylesheet" type="text/css" href="skillSet.css">
+<!-- Education  -->
+<link rel="stylesheet" type="text/css" href="education.css">
+<!-- Contact  -->
+<link rel="stylesheet" type="text/css" href="contact.css">
 
 <!-- JAVASCRIPT -->
 <!-- Custom Map Styles -->
@@ -30,104 +36,9 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7JB_vS-cSkYuBvIbtwcFbz1wOQrwBCCU&callback=initMap"
 async defer></script>
 
+<!-- CSS testing section -->
 <style>
-mapStyle
-  html, body {
-	max-width: 100%;
-    overflow-x: hidden;  
-	font: 400 15px/1.8 Lato, sans-serif;
-	color: #777;
-  }
-  
-  strong {
-	color: #d59563;
-  }
 
-  .lblBtn {
-	background-color: #2f3948;
-	color: #d59563; 
-  }
-  
-  .lblBtn:hover, .lblBtn:focus {
-	border: 1px solid #333;
-	background-color: #fff;
-	color: #d59563;
-  }
-
-  /* Google Map */
-  #map {
-    width: 100%;
-    height: 400px;
-  }
-  
-  #wrapper { 
-	position: relative; 
-  }
-  
-  #over_map { 
-	position: absolute; 
-	top: 10px; 
-	left: 10px; 
-	z-index: 99; 
-	margin-left:auto;
-    margin-right:auto;
-  }
-  
-  /* Form styles (On top of Google Map) */
-  textarea {
-	height: 200px;
-  }
-  
-  .inputStyle {
-	background-color: rgba(0,0,0,0.75);
-	border-style: solid;
-	border-color: #000;
-	color: #d59563; 
-	font-weight: normal;
-	width: 450px; 
-	padding: 3px 10px 3px 10px;
-  }
-  
-  ::-webkit-input-placeholder {
-	color: #d59563;
-	font-weight: normal;
-  }
-  
-  :-moz-placeholder { /* Firefox 18- */
-	color: #d59563; 
-	font-weight: normal; 
-  }
-  
-  ::-moz-placeholder {  /* Firefox 19+ */
-	color: #d59563; 
-	font-weight: normal; 
-  }
-  
-  :-ms-input-placeholder {  
-	color: #d59563;  
-	font-weight: normal;
-  }
-  
-  
-  /* Education */
-  .content-education  {
-	padding: 80px 0px 80px 0px;
-	margin-left:auto;
-    margin-right:auto;
-  }
-
-  /* Hide the University Logo when the screen is less than 600 pixels wide */  
-  @media (max-width: 600px) {
-    .content-education img {
-      display: none; 
-    }
-  }
-  
-  .content-education  h3 {
-	font-size: 3em;
-  }
-
-  
 </style>
 
 </head>
@@ -150,9 +61,9 @@ mapStyle
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#myPage">HOME</a></li>
         <li><a href="#aboutMe">ABOUT ME</a></li>
+        <li><a href="#skill-set">SKILL SET</a></li>
         <li><a href="#education">EDUCATION</a></li>
         <!-- <li><a href="#employment">EMPLOYMENT</a></li> -->
-        <li><a href="#skill-set">SKILL SET</a></li>
         <li><a href="#contact">CONTACT</a></li>
       </ul>
     </div>
@@ -182,81 +93,53 @@ mapStyle
 </section>
 
 <!-- About Me --> 
-<section id="aboutMe" class="container">
-  <h3 class="text-center">ABOUT ME</h3>
-  <hr>
-</section>
+<section id="aboutMe" class="padding">
 
-<!-- Education -->
-<section id="education" class="content-education container">
+  <div class="container">
+    <h3 class="text-center">ABOUT ME</h3>
+    <hr>
+    
+    <div class="row">
+      
+      <!-- Image -->
+      <div class="col-sm-4 text-center">
+        <img src="images/profilePic_350x350.jpg" class="img-responsive img-circle" style="display:inline" alt="Profile Picture of Malcolm Malloy" width="350" height="350">
+      </div>
+      
+      <!-- Bio -->
+      <div class="col-sm-8">
+        <p>Hi, my name is Malcolm and I am a Melbourne based Web Designer who believes in creating the best possible IT solutions for my clients.</p>
+      
+      <p>What can I do for your business?</p>
+      
+      <p>Web design is no longer just about presenting dry paragraphs of information, it’s about creating an engaging and artistic solution that can be accessed quickly and easily by the widest possible audience.</p> 
+      
+      <p>How Do I do this?</p>
+      
+      <ul>
+          <li>By placing a strong emphasis on search engine optimisation (SEO) in regards to visible content, metadata and the coding structure</li>
+          <li>Minimising loading times to maximise end-user satisfaction</li>
+          <li>Optimised coding to increase accessibility to a global audience</li>
+          <li>Screen reader friendly coding</li>
+          <li>Ensuring that older browsers render the website effectively to maximise accessibility.</li>
+          <li>Scalable and robust design that seamlessly adapts to large monitor resolutions or small screen portable devices</li>
+          <li>All graphical design work will be heuristically evaluated and tested to ensure compliance with <i>Nielsen’s Heuristics</i>, <i>Norman’s design principles</i> and <i>Shneiderman’s Golden Rules</i></li> 
+      </ul>
+    </div>
+  </div>
+</div>
 
-  <h3 class="text-center">EDUCATION</h3>
-  <hr>
-  
-  <!-- Masters Degree -->
-  <div class="row">
-      <div class="col-xs-6">
-      	<img src="images/monash-logo-transparent.png" alt="Monash University Logo" width="355" height="40">
-        <h4><strong>Masters of Business Information Systems</strong></h4>
-      </div>
-      <div class="col-xs-6">
-        <h4 class="text-right"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> July 2016 - Present</h4>
-      </div>
-  </div>
-  <p><b>Highlights</b></p>
-  <ul>
-    <li>Learning business process modelling, design and simulation</li>
-    <li>Learning programming and design principles for small screen devices</li>
-    <li>Researching and constructing a minor thesis</li>
-  </ul>
-  <hr>
-  
-  <!-- Bachelor Degree -->
-  <div class="row">
-    <div class="col-xs-6">
-      <img src="images/monash-logo-transparent.png" alt="Monash University Logo" width="355" height="40">
-      <h4><strong>Bachelor of Information Technology Systems</strong></h4>
-    </div>
-    <div class="col-xs-6">
-      <h4 class="text-right"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Mar 2009 - Nov 2011</h4>
-    </div>
-  </div>
-  <p><b>Highlights</b></p>
-  <ul>
-    <li>Winning the award for best Studio Project</li>
-    <li>Learning how to create fully functional PHP websites with custom CMS's</li>
-    <li>Learning 3D Animation using Maya and 3DS Max</li>
-    <li>Studying my final semester abroad at Monash Sunway Campus in Malaysia</li>
-  </ul>
-  <hr>
-  
-  <!-- Double Diploma -->
-  <div class="row">
-    <div class="col-xs-6">
-      <img src="images/chisholm-institute-transparent.png" alt="Chisholm Institute of TAFE Logo" width="275" height="40">
-      <h4><strong>Double Diploma of IT Multimedia and Web Design</strong></h4>
-    </div>
-    <div class="col-xs-6">
-      <h4 class="text-right"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Mar 2007 - Nov 2008</h4>
-    </div>
-  </div>
-  <p><b>Highlights</b></p>
-  <ul>
-    <li>Learning how to use Adobe Creative Suite (Photoshop, Dreamweaver, Flash etc...)</li>
-    <li>Learning how to use HTML, MySQL, JavaScript and CSS to create fully functional websites</li>
-    <li>Creating Windows applications using Visual Basic</li>
-  </ul>
-        
 </section>
 
 <!-- Skill Set -->
-<section id="skill-set"  class="content-skill-set container text-center">
-	
+<section id="skill-set"  class="content-skill-set padding text-center">
+
+<div class="container">	
   <h3>SKILL SET</h3>
   <p>Throughout my formal education and self study I have gained an extensive knowledge of many IT programs, languages and toolkits</p>
   <hr>
 
-  <div class="row">
+  
 	
     <!-- Web-Based Languages -->
     <div class="col-sm-4">
@@ -321,6 +204,72 @@ mapStyle
     </div>
 
   </div>
+</div>
+
+</section>
+
+<!-- Education -->
+<section id="education" class="content-education padding">
+  
+  <div class="container">
+    <h3 class="text-center">EDUCATION</h3>
+    <hr>
+    
+    <!-- Masters Degree -->
+    <div class="row">
+        <div class="col-xs-6">
+          <img src="images/monash-logo-transparent.png" alt="Monash University Logo" width="355" height="40">
+          <h4><strong>Masters of Business Information Systems</strong></h4>
+        </div>
+        <div class="col-xs-6">
+          <h4 class="text-right"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> July 2016 - Present</h4>
+        </div>
+    </div>
+    <p><b>Highlights</b></p>
+    <ul>
+      <li>Learning business process modelling, design and simulation</li>
+      <li>Learning programming and design principles for small screen devices</li>
+      <li>Researching and constructing a minor thesis</li>
+    </ul>
+    <hr>
+    
+    <!-- Bachelor Degree -->
+    <div class="row">
+      <div class="col-xs-6">
+        <img src="images/monash-logo-transparent.png" alt="Monash University Logo" width="355" height="40">
+        <h4><strong>Bachelor of Information Technology Systems</strong></h4>
+      </div>
+      <div class="col-xs-6">
+        <h4 class="text-right"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Mar 2009 - Nov 2011</h4>
+      </div>
+    </div>
+    <p><b>Highlights</b></p>
+    <ul>
+      <li>Winning the award for best Studio Project</li>
+      <li>Learning how to create fully functional PHP websites with custom CMS's</li>
+      <li>Learning 3D Animation using Maya and 3DS Max</li>
+      <li>Studying my final semester abroad at Monash Sunway Campus in Malaysia</li>
+    </ul>
+    <hr>
+    
+    <!-- Double Diploma -->
+    <div class="row">
+      <div class="col-xs-6">
+        <img src="images/chisholm-institute-transparent.png" alt="Chisholm Institute of TAFE Logo" width="275" height="40">
+        <h4><strong>Double Diploma of IT Multimedia and Web Design</strong></h4>
+      </div>
+      <div class="col-xs-6">
+        <h4 class="text-right"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Mar 2007 - Nov 2008</h4>
+      </div>
+    </div>
+    <p><b>Highlights</b></p>
+    <ul>
+      <li>Learning how to use Adobe Creative Suite (Photoshop, Dreamweaver, Flash etc...)</li>
+      <li>Learning how to use HTML, MySQL, JavaScript and CSS to create fully functional websites</li>
+      <li>Creating Windows applications using Visual Basic</li>
+    </ul>
+  </div>
+        
 </section>
 
 <!-- Contact Me -->
@@ -354,3 +303,5 @@ mapStyle
 
 </body>
 </html>
+
+<!-- Website created by Malcolm Malloy 2017 -->
