@@ -1,0 +1,71 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.background  {
+  color: #FFF;
+  position: static;
+  background-color: #222222;
+}
+
+.content-skill-set  ul {
+  padding: 0px;
+}
+
+.content-skill-set  li {
+  list-style-type: none;
+  text-align: center;
+}
+
+.content-skill-set label {
+  margin-bottom: 40px;  
+}
+  
+.lblBtn {
+  color: #FFF;
+  background-color: #d59563;
+  padding : 10px 80px 10px 80px;
+  display: inline-block;
+  width: 160px;
+  opacity: 0.8;
+}
+
+.lblBtn:hover, .lblBtn:focus {
+  opacity: 1;
+  color: #FFF;
+}
+
+/* Read More Function */
+.read-more-state {
+  display: none;
+}
+
+.read-more-target {
+  opacity: 0;
+  max-height: 0;
+  font-size: 0;
+  transition: .25s ease;
+}
+
+.read-more-state:checked ~ .read-more-wrap .read-more-target {
+  opacity: 1;
+  font-size: inherit;
+  max-height: 999em;
+}
+
+.read-more-state ~ .read-more-trigger:before {
+  content: 'show more';
+}
+
+.read-more-state:checked ~ .read-more-trigger:before {
+  content: 'show less';
+}
+
+.read-more-trigger {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 .5em;
+  color: #FFF;
+  font-size: .9em;
+  line-height: 2;
+  
+}

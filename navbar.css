@@ -2,27 +2,35 @@
 /* CSS Document */
 
 .navbar {
-	margin-bottom: 0;
-	background-color: #2d2d30;
-	border: 0;
-	font-size: 11px !important;
-	letter-spacing: 4px;
-	opacity: 0.9;
+  font-family: Montserrat, sans-serif;
+  margin-bottom: 0;
+  background-color: #282828;
+  border: 0;
+  font-size: 1em !important;
+  letter-spacing: 4px;
+  opacity: 0.9;
 }
 
-.navbar li a, .navbar .navbar-brand { 
-	color: #d5d5d5 !important;
+.navbar-brand { 
+  color: #d5d5d5 !important;
+  font-family: 'Damion', cursive;
 }
 
-.navbar-nav li a:hover {
-	color: #fff !important;
+.navbar-header a:hover { 
+  color: #f4511e !important;
 }
 
-.navbar-nav li.active a {
-	color: #fff !important;
-	background-color: #29292c !important;
+.navbar li a, .navbar .navbar-brand {
+  color: #fff !important;
+}
+
+.navbar-nav li a:hover, .navbar-nav li.active a {
+  color: #f4511e !important;
+  background-color: #222 !important;
 }
 
 .navbar-default .navbar-toggle {
-	border-color: transparent;
+  border-color: transparent;
+  color: #fff !important;
 }
+
